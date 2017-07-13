@@ -18,7 +18,7 @@
     ]
   },
   "identifier" : "iturbide.colourSwift",
-  "version" : "1.2",
+  "version" : "1.0",
   "description" : "Generate swift code from colours",
   "authorEmail" : "reach@iturbi.de",
   "name" : "Colour Swift"
