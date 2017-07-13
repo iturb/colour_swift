@@ -6,7 +6,7 @@
       "script" : "script.cocoascript",
       "name" : "Generate colour code",
       "handlers" : {
-        "run" : "onRun"
+        "generateCode" : "generateCode"
       },
       "identifier" : "genColourCode"
     }
