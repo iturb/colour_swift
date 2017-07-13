@@ -1,4 +1,4 @@
-var onRun = function(context)
+var generateCode = function(context)
 {
     var selectedLayers = context.selection;
     var countLayers = selectedLayers.count();
@@ -21,13 +21,13 @@ var onRun = function(context)
             "blue:"+colour.blue()+", "+
             "alpha:"+colour.alpha()+")";
 
-            colourList.push(colourString)
+            colourList.push(colourString);
         }
     }
 
     var coloursString = colourList.join("\n")
 
     var board = [NSPasteboard generalPasteboard];
-    [pasteBoard declareTypes:[NSArray arrayWithObject:NSPasteboardTypeString] owner:nil];
-    [pasteBoard setString:coloursString forType:NSPasteboardTypeString];
+    [board declareTypes:[NSArray arrayWithObject:NSPasteboardTypeString] owner:nil];
+    [board setString:coloursString forType:NSPasteboardTypeString];
 }
