@@ -18,8 +18,8 @@
   },
   "identifier": "iturbide.colourSwift",
   "appcast": "https://raw.githubusercontent.com/iturb/colour_swift/master/appcast.xml",
-  "version": "1.0",
-  "compatibleVersion": "42",
+  "version": "1.1",
+  "compatibleVersion": "45",
   "description": "Generate swift code from colours",
   "authorEmail": "reach@iturbi.de",
   "name": "Colour Swift"
