@@ -8,20 +8,24 @@ var generateCode = function(context)
     {
         var layer = selectedLayers[layerIndex];
         var layerName = layer.name();
-        var colours = layer.style().fills();
-        var countColours = colours.count();
+        var fills = layer.style().fills();
+        var countFills = fills.count();
 
-        for (colourIndex = 0; colourIndex < countColours; colourIndex++)
+        var title = "// "+layerName;
+        colourList.push(title);
+
+        for (fillIndex = 0; fillIndex < countFills; fillIndex++)
         {
-            var fill = colours[colourIndex];
+            var fill = fills[fillIndex];
             var colour = fill.color();
 
-            var colourString = "let "+layerName+""+colourIndex+
-            ":UIColor = "+
-            "UIColor(red:"+colour.red()+", "+
-            "green:"+colour.green()+", "+
-            "blue:"+colour.blue()+", "+
-            "alpha:"+colour.alpha()+")";
+            log(colour.red());
+            var colourString = ""+
+            "UIColor(\n"+
+            "    red:"+colour.red()+",\n"+
+            "    green:"+colour.green()+",\n"+
+            "    blue:"+colour.blue()+",\n"+
+            "    alpha:"+colour.alpha()+")\n";
 
             colourList.push(colourString);
         }
@@ -29,7 +33,7 @@ var generateCode = function(context)
 
     var coloursString = colourList.join("\n")
 
-    var textViewSize = NSMakeRect(0, 0, 300, 450);
+    var textViewSize = NSMakeRect(0, 0, 300, 300);
     var textView = NSTextView.alloc().initWithFrame(textViewSize);
     textView.editable = false;
     textView.setString(coloursString);
