@@ -7,18 +7,18 @@
       "handlers": {
         "run" : "generateCode"
       },
-      "identifier": "genColourCode"
+      "identifier": "iturbide.genColourCode"
     }
   ],
   "menu": {
     "title": "Colour Swift",
     "items": [
-      "genColourCode"
+      "iturbide.genColourCode"
     ]
   },
   "identifier": "iturbide.colourSwift",
   "appcast": "https://raw.githubusercontent.com/iturb/colour_swift/master/appcast.xml",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "compatibleVersion": "45",
   "description": "Generate swift code from colours",
   "authorEmail": "reach@iturbi.de",
