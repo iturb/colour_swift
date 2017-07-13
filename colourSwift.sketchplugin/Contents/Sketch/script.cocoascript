@@ -1,20 +1,33 @@
 var onRun = function(context)
 {
-          log('This is an example Sketch script.');
+    var selectedLayers = context.selection;
+    var countLayers = selectedLayers.count();
+    var colourList = [];
 
-var documentName = context.document.displayName();
-log('The current document is named: ' + documentName);
+    for (var layerIndex = 0; layerIndex < countLayers; layerIndex++)
+    {
+        var layer = selectedLayers[layerIndex];
+        var layerName = layer.name();
+        var colours = layer.style().fills().array();
+        var countColours = colours.count();
 
-var selectedLayers = context.selection;
-var selectedCount = selectedLayers.count();
+        for (colourIndex = 0; colourIndex < countColours; colourIndex++)
+        {
+            var colour = colours[colourIndex];
+            var colourString = "let "+layerName+""+colourIndex+
+            ":UIColor = "+
+            "UIColor(red:"+colour.red()+", "+
+            "green:"+colour.green()+", "+
+            "blue:"+colour.blue()+", "+
+            "alpha:"+colour.alpha()+")";
 
-if (selectedCount == 0) {
-  log('No layers are selected.');
-} else {
-  log('Selected layers:');
-  for (var i = 0; i < selectedCount; i++) {
-    var layer = selectedLayers[i];
-    log((i+1) + '. ' + layer.name());
-  }
-};
-};
+            colourList.push(colourString)
+        }
+    }
+
+    var coloursString = colourList.join("\n")
+
+    var board = [NSPasteboard generalPasteboard];
+    [pasteBoard declareTypes:[NSArray arrayWithObject:NSPasteboardTypeString] owner:nil];
+    [pasteBoard setString:coloursString forType:NSPasteboardTypeString];
+}
