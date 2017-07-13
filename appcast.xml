@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
     <channel>
         <title>Colour Swift</title>
-        <link></link>
+        <link>https://raw.githubusercontent.com/iturb/colour_swift/master/appcast.xml</link>
         <description>Generate swift code from colours</description>
         <language>en</language>
         <item>
-            <title>Version 1.0.1</title>
+            <title>Version 1.1</title>
             <description>
                 <![CDATA[
                     First release
