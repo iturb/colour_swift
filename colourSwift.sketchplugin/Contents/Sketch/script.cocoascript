@@ -8,7 +8,7 @@ var generateCode = function(context)
     {
         var layer = selectedLayers[layerIndex];
         var layerName = layer.name();
-        var colours = layer.style().fills().array();
+        var colours = layer.style().fills();
         var countColours = colours.count();
 
         for (colourIndex = 0; colourIndex < countColours; colourIndex++)
