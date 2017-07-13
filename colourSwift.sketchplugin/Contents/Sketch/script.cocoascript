@@ -13,13 +13,15 @@ var generateCode = function(context)
 
         for (colourIndex = 0; colourIndex < countColours; colourIndex++)
         {
-            var colour = colours[colourIndex];
+            var fill = colours[colourIndex];
+            var colour = fill.color();
+
             var colourString = "let "+layerName+""+colourIndex+
             ":UIColor = "+
-            "UIColor(red:"+colour.red+", "+
-            "green:"+colour.green+", "+
-            "blue:"+colour.blue+", "+
-            "alpha:"+colour.alpha+")";
+            "UIColor(red:"+colour.red()+", "+
+            "green:"+colour.green()+", "+
+            "blue:"+colour.blue()+", "+
+            "alpha:"+colour.alpha()+")";
 
             colourList.push(colourString);
         }
