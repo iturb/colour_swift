@@ -29,7 +29,7 @@ var generateCode = function(context)
 
     var coloursString = colourList.join("\n")
 
-    var textViewSize = NSMakeRect(0, 0, 500, 400);
+    var textViewSize = NSMakeRect(0, 0, 300, 450);
     var textView = NSTextView.alloc().initWithFrame(textViewSize);
     textView.editable = false;
     textView.setString(coloursString);
