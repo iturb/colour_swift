@@ -1,25 +1,26 @@
 {
-  "author" : "Agustin Iturbide",
-  "appcast" : "https://raw.githubusercontent.com/iturb/colour_swift/master/appcast.xml",
-  "commands" : [
+  "author": "Agustin Iturbide",
+  "commands": [
     {
-      "script" : "script.cocoascript",
-      "name" : "Generate colour code",
-      "handlers" : {
+      "script": "script.cocoascript",
+      "name": "Generate colour code",
+      "handlers": {
         "run" : "generateCode"
       },
-      "identifier" : "genColourCode"
+      "identifier": "genColourCode"
     }
   ],
-  "menu" : {
-    "title" : "Colour Swift",
-    "items" : [
+  "menu": {
+    "title": "Colour Swift",
+    "items": [
       "genColourCode"
     ]
   },
-  "identifier" : "iturbide.colourSwift",
-  "version" : "1.0",
-  "description" : "Generate swift code from colours",
-  "authorEmail" : "reach@iturbi.de",
-  "name" : "Colour Swift"
+  "identifier": "iturbide.colourSwift",
+  "appcast": "https://raw.githubusercontent.com/iturb/colour_swift/master/appcast.xml",
+  "version": "1.0",
+  "compatibleVersion": "42",
+  "description": "Generate swift code from colours",
+  "authorEmail": "reach@iturbi.de",
+  "name": "Colour Swift"
 }
