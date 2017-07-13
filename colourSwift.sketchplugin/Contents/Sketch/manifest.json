@@ -1,5 +1,6 @@
 {
   "author" : "Agustin Iturbide",
+  "appcast" : "https://raw.githubusercontent.com/iturb/colour_swift/master/appcast.xml",
   "commands" : [
     {
       "script" : "script.cocoascript",
