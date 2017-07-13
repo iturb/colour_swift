@@ -1,24 +1,24 @@
 {
-  "author" : "",
+  "author" : "Agustin Iturbide",
   "commands" : [
     {
       "script" : "script.cocoascript",
-      "name" : "colourSwift",
+      "name" : "Generate colour code",
       "handlers" : {
         "run" : "onRun"
       },
-      "identifier" : "com.bohemiancoding.sketch.runscriptidentifier"
+      "identifier" : "genColourCode"
     }
   ],
   "menu" : {
-    "title" : "colourSwift",
+    "title" : "Colour Swift",
     "items" : [
-      "com.bohemiancoding.sketch.runscriptidentifier"
+      "genColourCode"
     ]
   },
-  "identifier" : "com.example.sketch.66fc6dd5-8098-4630-a13c-4f2ee9a2c464",
+  "identifier" : "iturbide.colourSwift",
   "version" : "1.0",
-  "description" : "",
-  "authorEmail" : "",
-  "name" : "colourSwift"
+  "description" : "Generate swift code from colours",
+  "authorEmail" : "reach@iturbi.de",
+  "name" : "Colour Swift"
 }
