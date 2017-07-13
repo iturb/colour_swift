@@ -29,7 +29,16 @@ var generateCode = function(context)
 
     var coloursString = colourList.join("\n")
 
-    var board = [NSPasteboard generalPasteboard];
-    [board declareTypes:[NSArray arrayWithObject:NSPasteboardTypeString] owner:nil];
-    [board setString:coloursString forType:NSPasteboardTypeString];
+    var textViewSize = NSMakeRect(0, 0, 500, 400);
+    var textView = NSTextView.alloc().initWithFrame(textViewSize);
+    textView.editable = false;
+    textView.setString(coloursString);
+    textView.setBackgroundColor(NSColor.clearColor());
+    textView.setTextColor(NSColor.blackColor());
+
+    var alert = COSAlertWindow.new();
+    alert.setMessageText("Colour Swift");
+    alert.addButtonWithTitle("Done");
+    alert.addAccessoryView(textView);
+    alert.runModal();
 }
