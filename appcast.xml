@@ -6,13 +6,13 @@
         <description>Generate swift code from colours</description>
         <language>en</language>
         <item>
-            <title>Version 0.1</title>
+            <title>Version 1.0</title>
             <description>
                 <![CDATA[
                     First release
                 ]]>
             </description>
-            <enclosure url=https://github.com/iturb/colour_swift/archive/v0.1.zip"" sparkle:version="0.1" />
+            <enclosure url=https://github.com/iturb/colour_swift/archive/v1.0.zip"" sparkle:version="0.1" />
         </item>
         <item>
     </channel>
